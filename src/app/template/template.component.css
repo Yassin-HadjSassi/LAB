@@ -1,0 +1,157 @@
+/* General container styles */
+mat-sidenav-container {
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-color: #f5f5f5; /* Light background for content area */
+  }
+  
+  /* Sidenav styles */
+  mat-sidenav {
+    width: 230px; /* Fixed width as specified */
+    background-color: #ffffff; /* White background for sidenav */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-right: 1px solid #e0e0e0; /* Light border */
+  }
+  
+  /* Sidenav toolbar */
+  mat-toolbar {
+    height: 64px; /* Standard toolbar height */
+    padding: 0 16px; /* Consistent padding */
+  }
+  
+  /* Primary toolbar in sidenav */
+  mat-toolbar[color="primary"] {
+    background-color: #3f51b5; /* Material primary color (Indigo) */
+    color: #ffffff; /* White text/icons */
+  }
+  
+  /* Sidenav navigation list */
+  mat-nav-list {
+    padding: 8px 0; /* Vertical padding for list */
+  }
+  
+  mat-nav-list a {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 48px; /* Standard list item height */
+    color: #333; /* Dark text for readability */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  mat-nav-list a:hover {
+    background-color: #f5f5f5; /* Light hover effect */
+    color: #3f51b5; /* Match primary color */
+  }
+  
+  mat-nav-list a mat-icon {
+    margin-right: 16px; /* Space between icon and text */
+  }
+  
+  /* Active route styling */
+  mat-nav-list a[routerLinkActive] {
+    background-color: #e8eaf6; /* Light primary shade */
+    color: #3f51b5; /* Primary color for active item */
+    font-weight: 500; /* Slightly bolder text */
+  }
+  
+  /* Sidenav content */
+  mat-sidenav-content {
+    overflow: auto; /* Allow scrolling in content */
+  }
+  
+  /* Main content toolbar */
+  mat-sidenav-content mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure toolbar stays above content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Toolbar button */
+  .toolbar-button {
+    margin-right: 8px; /* Space between buttons */
+  }
+  
+  .toolbar-button mat-icon {
+    font-size: 24px; /* Standard icon size */
+  }
+  
+  /* Toolbar separator */
+  .toolbar-separator {
+    width: 1px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.3); /* Light separator */
+    margin: 0 16px;
+  }
+  
+  /* User menu button */
+  button[matMenuTriggerFor="userMenu"] {
+    padding: 0 8px;
+    border-radius: 4px; /* Subtle rounding */
+  }
+  
+  .avatar {
+    object-fit: cover; /* Ensure image fits well */
+  }
+  
+  /* User menu */
+  mat-menu {
+    min-width: 180px; /* Minimum width for menu */
+  }
+  
+  mat-menu button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 16px;
+    color: #333;
+  }
+  
+  mat-menu button mat-icon {
+    margin-right: 12px;
+  }
+  
+  mat-menu button:hover {
+    background-color: #f5f5f5; /* Light hover effect */
+  }
+  
+  /* Main content area */
+  .content {
+    margin-top: 80px; /* Space for fixed toolbar */
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 24px; /* Comfortable padding */
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px; /* Subtle rounding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow */
+    min-height: calc(100vh - 144px); /* Adjust for toolbar and margin */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    mat-sidenav {
+      width: 200px; /* Slightly narrower for smaller screens */
+    }
+  
+    .content {
+      margin-top: 64px; /* Adjust for smaller toolbar */
+      padding: 16px; /* Reduced padding */
+    }
+  
+    .username {
+      display: none; /* Hide username on small screens */
+    }
+  
+    button[matMenuTriggerFor="userMenu"] {
+      margin-left: auto; /* Push to right */
+      margin-right: 8px;
+    }
+  }
+  
+  /* Ensure router outlet takes full space */
+  router-outlet + * {
+    display: block;
+    height: 100%;
+  }

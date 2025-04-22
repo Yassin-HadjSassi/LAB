@@ -1,0 +1,13 @@
+<form (ngSubmit)="sub()">
+    <p>
+        <mat-form-field appearance="fill">
+        <input  matInput placeholder="email" type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+        <input matInput placeholder="password" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"> 
+        </mat-form-field>
+    </p>
+    <button type="submit">Login</button>
+</form>

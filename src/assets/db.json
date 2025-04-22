@@ -1,0 +1,75 @@
+{
+  "members": [
+    {
+      "cin": "123456",
+      "name": "yassine",
+      "type": "teacher",
+      "createdDate": "10/07/2025",
+      "id": "1001"
+    },
+    {
+      "id": "1002",
+      "cin": "1214578",
+      "name": "imene",
+      "type": "teacher",
+      "createdDate": "12/12/2020"
+    },
+    {
+      "cin": "120402",
+      "name": "ahmed",
+      "type": "student",
+      "createdDate": "4/5/2025",
+      "id": "1003"
+    }
+  ],
+  "evts": [
+    {
+      "Titre": "Mee",
+      "DateDebut": "2025-04-08T23:00:00.000Z",
+      "Datefin": "2025-04-22T23:00:00.000Z",
+      "Lieu": "sfax",
+      "id": "ae88"
+    },
+    {
+      "id": "d803",
+      "Titre": "helloooo",
+      "DateDebut": "2025-04-16T23:00:00.000Z",
+      "Datefin": "2025-04-22T23:00:00.000Z",
+      "Lieu": "sfax"
+    }
+  ],
+  "pubs": [
+    {
+      "id": "1004",
+      "type": "old",
+      "titre": "gd",
+      "lien": "ssfsf",
+      "date": "19/8/2025",
+      "sourcepdf": "gf"
+    },
+    {
+      "id": "1001",
+      "type": "arar",
+      "titre": "gh",
+      "lien": "ssfsf",
+      "date": "12/9/2025",
+      "sourcepdf": "qfeqf"
+    },
+    {
+      "id": "1003",
+      "type": "hed",
+      "titre": "fd",
+      "lien": "ssfsf",
+      "date": "12/8/2025",
+      "sourcepdf": "qsgh"
+    },
+    {
+      "id": "1007",
+      "type": "new",
+      "titre": "jq",
+      "lien": "ssfsf",
+      "date": "12/98/2025",
+      "sourcepdf": "ehgqgqf"
+    }
+  ]
+}
