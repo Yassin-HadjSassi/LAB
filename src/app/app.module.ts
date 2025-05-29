@@ -33,6 +33,8 @@ import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { firebaseConfig } from './environement';
 import { LoginComponent } from './login/login.component';
+import {MatCardModule} from '@angular/material/card';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -52,6 +54,10 @@ import { LoginComponent } from './login/login.component';
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+
+    NgChartsModule,
+
+    MatCardModule,
     MatNativeDateModule,
     MatDatepickerModule,
     MatSortModule,

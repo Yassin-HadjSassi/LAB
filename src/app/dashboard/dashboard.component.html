@@ -1,1 +1,52 @@
-<p>dashboard works!</p>
+<div class="dashboard-layout">
+  <!-- Main scrollable chart area -->
+  <div class="charts-area">
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [type]="'bar'"
+              [datasets]="chartDatabar"
+              [labels]="chartLabelsbar"
+              [options]="chartOptions">
+      </canvas>
+    </div>
+
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [type]="'line'"
+              [datasets]="chartDataline"
+              [labels]="chartLabelsline"
+              [options]="chartOptions">
+      </canvas>
+    </div>
+
+    <div class="chart-wrapper">
+      <canvas baseChart
+              [type]="'pie'"
+              [datasets]="chartDataPie"
+              [labels]="chartLabelsPie"
+              [options]="chartOptions">
+      </canvas>
+    </div>
+    
+
+    <!-- Add more chart-wrapper blocks if needed -->
+  </div>
+
+  <!-- Fixed right card column -->
+  <div class="fixed-card">
+    <mat-card class="dashboard-card">
+      <mat-card-title>Members</mat-card-title>
+      <mat-card-content>{{ Nb_Members }}</mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-card">
+      <mat-card-title>Events</mat-card-title>
+      <mat-card-content>{{ Nb_Events }}</mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-card">
+      <mat-card-title>Pubs</mat-card-title>
+      <mat-card-content>{{ Nb_Pub }}</mat-card-content>
+    </mat-card>
+  </div>
+</div>

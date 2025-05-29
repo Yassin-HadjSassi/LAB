@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,10 +12,15 @@ export class LoginComponent {
   email:string=""
   password:string=""
 
-  constructor(){}
+  constructor(private auth:AuthService, private router:Router){}
 
   sub():void{
-    console.log(this.email,this.password)
+    console.log(this.email," / ",this.password)
+    this.auth.signInWithEmailAndPassword(this.email,this.password).
+    then((res)=>{
+      console.log(res)
+      this.router.navigate(['/members'])
+    })
   }
 
 }
